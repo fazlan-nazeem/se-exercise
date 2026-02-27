@@ -15,6 +15,25 @@ The application consists of 4 services:
 
 The application includes a web-based user interface for managing tasks through your browser, as well as a REST API for programmatic access.
 
+## Project Structure
+
+```
+se-exercise/
+├── api/
+│   ├── app.py              # Flask REST API application
+│   ├── Dockerfile          # API service Dockerfile (to be hardened)
+│   └── requirements.txt    # Python dependencies
+├── frontend/
+│   ├── index.html          # Web UI
+│   ├── styles.css          # Styling
+│   └── app.js              # Frontend JavaScript
+├── nginx/
+│   └── nginx.conf          # Nginx configuration
+├── docker-compose.yml      # Multi-service orchestration (to be hardened)
+├── test.sh                 # Automated API test script
+└── README.md               # This file
+```
+
 ## Current State
 
 The application currently uses standard Docker images:
@@ -34,38 +53,31 @@ The application currently uses standard Docker images:
 3. Document your image choices and reasoning
 4. Suggest any possible improvements
 
-### Suggested Hardened Image Options
-
-Consider these alternatives:
-- **Alpine-based images** (smaller attack surface)
-- **Distroless images** (minimal runtime dependencies)
-- **Docker Official hardened variants**
-- **Chainguard Images** (if available)
-- **Custom minimal builds**
 
 ### Evaluation Criteria
 
 You will be evaluated on:
-- Successful migration with working functionality
-- Image size reduction
-- Security improvements
-- Understanding of trade-offs
+- **Functionality** - Both Web UI and API work correctly after hardening
+- **Image Selection** - Appropriate hardened images chosen for each service
+- **Security Improvements** 
+- **Image Size Reduction** - Significant reduction in total image sizes
+
 
 ## Getting Started
 
-### Setup
+### Quick Start
 
 1. Clone this repository
-2. Copy `.env.example` to `.env`
-3. Run the application:
+2. Start the application:
 
 ```bash
 docker-compose up --build
 ```
 
-4. Access the application:
+3. Access the application:
 
-**Web UI:**
+### Using the Web UI
+
 Open your browser and navigate to:
 ```
 http://localhost
@@ -73,12 +85,17 @@ http://localhost
 
 ## Deliverables
 
-1. Updated `docker-compose.yml` with hardened images
-2. Updated `Dockerfile` for the API service
-3. A `SOLUTION.md` file explaining:
-   - Which images you chose and why
-   - Security improvements achieved
-   - Any challenges faced and how you solved them
-   - Trade-offs considered
+Submit the following:
+
+1. **Updated `docker-compose.yml`** - With all services using hardened images
+2. **Updated `api/Dockerfile`** - Hardened Python application container
+3. **`SOLUTION.md`** - Comprehensive documentation including:
+   - Image choices and justification for each service
+   - Security improvements and measurements
+   - Size comparison (before/after)
+   - Challenges encountered and solutions
+   - Trade-offs and considerations
+   - Any additional hardening measures implemented
+
 
 Good luck!
