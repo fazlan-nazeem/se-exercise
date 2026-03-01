@@ -21,6 +21,7 @@ services:
   redis:
     image: redis:7
     container_name: taskcache
+    command: ["redis-server", "--protected-mode", "no"]
     networks:
       - backend
     healthcheck:
@@ -50,7 +51,7 @@ services:
     networks:
       - backend
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/health')"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -69,7 +70,7 @@ services:
     networks:
       - backend
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      test: ["CMD-SHELL", "kill -0 $(cat /var/run/nginx.pid) || exit 1"]
       interval: 10s
       timeout: 5s
       retries: 5

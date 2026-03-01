@@ -27,7 +27,13 @@ db = SQLAlchemy(app)
 # Redis configuration
 redis_host = os.getenv('REDIS_HOST', 'redis')
 redis_port = int(os.getenv('REDIS_PORT', 6379))
-cache = redis.Redis(host=redis_host, port=redis_port, decode_responses=True)
+cache = redis.Redis(
+    host=redis_host,
+    port=redis_port,
+    decode_responses=True,
+    lib_name="",
+    lib_version=""
+)
 
 # Database Models
 class Task(db.Model):
