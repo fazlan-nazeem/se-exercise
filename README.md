@@ -93,9 +93,6 @@ Submit the following:
    - Image choices and justification for each service
    - Security improvements and measurements
    - Size comparison (before/after)
-   - Challenges encountered and solutions
-   - Trade-offs and considerations
-   - Any additional hardening measures implemented
 
 
 Good luck!
