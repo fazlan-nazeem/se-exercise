@@ -59,7 +59,7 @@ Submit the following:
 
 2. Mock Customer Presentation
 
-Prepare a **30-45mins presentation** to deliver in a mock customer meeting with the following personas:
+Prepare a **30-45 mins presentation** to deliver in a mock customer meeting with the following personas:
 
 | Persona | Title | Focus |
 |---|---|---|
