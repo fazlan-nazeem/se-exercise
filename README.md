@@ -85,6 +85,8 @@ http://localhost
 
 ## Deliverables
 
+### Deliverable 1-3: Technical Implementation
+
 Submit the following:
 
 1. **Updated `docker-compose.yml`** - With all services using hardened images
@@ -93,6 +95,27 @@ Submit the following:
    - Image choices and justification for each service
    - Security improvements and measurements
    - Size comparison (before/after)
+
+### Deliverable 4: Mock Customer Presentation
+
+Prepare a **10–15 minute presentation** to deliver in a mock customer meeting with the following personas:
+
+| Persona | Title | Focus |
+|---|---|---|
+| :lock: Security Stakeholder | CISO / VP of Security | Supply chain risk, CVE reduction, compliance, image signing & attestation |
+| :gear: Technical Practitioner | Staff / Principal Platform Engineer | Migration path, CI/CD integration, Dockerfile compatibility, operational impact |
+| :bar_chart: Business Stakeholder | VP of Engineering | Developer productivity, ROI, build vs. buy, strategic risk reduction |
+
+Your presentation should cover:
+
+- **The problem** — What supply chain and image security risks does the customer face today?
+- **The solution** — How does Docker Hardened Images address those risks? Walk through what you built in the exercise as a concrete example.
+- **Business value** — Quantify or articulate the value for each persona (e.g., reduced CVE remediation time, simplified compliance, faster developer onboarding).
+- **Next steps** — What would you recommend as a logical proof-of-concept or expansion path for this customer?
+
+The Docker team in the room will role-play as the three customer personas above and may ask follow-up questions from their perspective. You do not need slides — a whiteboard walk-through or live demo is fine.
+
+> **Tip:** The strongest presentations connect the technical work you did in the exercise directly to a business outcome each persona cares about.
 
 
 Good luck!
