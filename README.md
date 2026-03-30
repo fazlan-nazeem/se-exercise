@@ -15,33 +15,6 @@ The application consists of 4 services:
 
 The application includes a web-based user interface for managing tasks through your browser, as well as a REST API for programmatic access.
 
-## Project Structure
-
-```
-se-exercise/
-├── api/
-│   ├── app.py              # Flask REST API application
-│   ├── Dockerfile          # API service Dockerfile (to be hardened)
-│   └── requirements.txt    # Python dependencies
-├── frontend/
-│   ├── index.html          # Web UI
-│   ├── styles.css          # Styling
-│   └── app.js              # Frontend JavaScript
-├── nginx/
-│   └── nginx.conf          # Nginx configuration
-├── docker-compose.yml      # Multi-service orchestration (to be hardened)
-├── test.sh                 # Automated API test script
-└── README.md               # This file
-```
-
-## Current State
-
-The application currently uses standard Docker images:
-- `python:3.11` for the API
-- `postgres:15` for the database
-- `redis:7` for caching
-- `nginx:latest` for serving the frontend and proxying API requests
-
 ## Your Task
 
 **Migrate all services to use hardened/secured Docker images while maintaining full functionality.**
